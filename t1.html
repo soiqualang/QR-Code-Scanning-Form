@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Test QR Code Scanning From HTML, JS</title>
+        <script src="https://dmla.github.io/jsqrcode/src/qr_packed.js"></script>
         <style>
             body, input {font-size:14pt}
             input, label {vertical-align:middle}
@@ -14,7 +15,10 @@
     </head>
     
     <body>
-        <input type=text size=16 placeholder="Tracking Code" class=qrcode-text><label class=qrcode-text-btn><input type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1></label> 
+        <input type=text size=16 placeholder="Tracking Code" class=qrcode-text>
+        <label class=qrcode-text-btn>
+            <input type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1>
+        </label> 
         <input type=button value="Go" disabled>
         <script>
             function openQRCamera(node) {
